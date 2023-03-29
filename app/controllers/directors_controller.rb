@@ -15,6 +15,14 @@ class DirectorsController < ApplicationController
     # params looks like {"an_id" => "42"}
     the_id = params.fetch("an_id")
     @the_director = Director.where({ :id => the_id }).at(0)
+
+    @filmography = Movie.where({ :director_id => @the_director.id})
     render({ :template => "director_template/show.html.erb" })
+  end
+
+  def movie_details
+    movie_id = params.fetch("movie_id")
+    @movie = Movie.where({ :id => movie_id}).at(0)
+    render({ :template => "movie_template/movies.html.erb" })
   end
 end
