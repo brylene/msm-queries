@@ -60,8 +60,31 @@
 </dl>
 
 <h2>Filmography</h2>
-
 <table border="1">
+  <tr>
+    <th>
+      ID
+    </th>
+
+    <th>
+      Image
+    </th>
+
+    <th>
+      Title
+    </th>
+
+    <th>
+      Year
+    </th>
+
+    <th>
+      Director
+    </th>
+
+    <th>
+    </th>
+  </tr>
 <% @filmography.each do |a_film| %>
   <tr>
     <td>
@@ -81,7 +104,7 @@
       <%= d.name %>
     </td>
     <td>
-      <a href="/directors/<%= a_film.id %>">
+      <a href="/movies/<%= a_film.id %>">
         Show details
     </td>
   </tr>
