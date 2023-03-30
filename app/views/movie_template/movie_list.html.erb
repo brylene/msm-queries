@@ -31,9 +31,11 @@
     <td>
     <img src="<%= a_movie.image %>"
     </td>
-    <td><%= a_movie.title %>
+    <td>
+    <%= a_movie.title %>
     </td>
-    <td><%= a_movie.year %>
+    <td>
+    <%= a_movie.year %>
     </td>
     <td>
       <% m = Director.where({ :id => a_movie.director_id }).at(0) %>
